@@ -45,7 +45,7 @@ List<FileInfo> treeFromWebDavXml(String xmlStr) {
   var tree = new List<FileInfo>();
 
   // parse the xml using the xml.parse method
-  var xmlDocument = xml.parse(xmlStr);
+  var xmlDocument = xml.XmlDocument.parse(xmlStr);
 
   // Iterate over the response to find all folders / files and parse the information
   findAllElementsFromDocument(xmlDocument, "response").forEach((response) {
